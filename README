@@ -1,0 +1,15 @@
+ error_level_difference(string, int, int, int)
+ filename: Filename of the image
+ iterations: Number of iterations to run ELD.
+ qualityV: Starting quality value. Diminishes over each iteration
+ scale: Scales the pixel values. Makes differing artifacts easier to see.
+ 
+ ACKNOWLEDGEMENTS: 
+                   Hany Farid, for his papers and 
+                   research on digital forensics.
+
+                   Sungjoo Ha (shurain), for his 
+                   starting code on ELA.
+ 
+ 
+Photo credit: http://imgur.com/user/ANewBadlyPhotoshoppedPhotoofMichaelCeraEveryday
