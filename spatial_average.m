@@ -5,7 +5,7 @@ function [ res ] = spatial_average( img_diff, sqBlockSize )
     
     h = fspecial( 'average', sqBlockSize );
     
-    res = imfilter( (1/3)*img_diff, h );
+    res = imfilter( img_diff, h );
     
 end
 

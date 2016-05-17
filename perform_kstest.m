@@ -34,7 +34,7 @@ function [ ksResults ] = perform_kstest( img, deltaRow, deltaCol )
                 cdf2 = cumsum( count2 ) / sum( count2 );
                 
                 ksResults( index, jindex, colorIndex ) = ...
-                    kstest2( cdf1, cdf2 );
+                    kstest2( cdf1, cdf2, 'Alpha', 0.05 );
                 
             end
             

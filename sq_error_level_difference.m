@@ -7,8 +7,9 @@ function [ diff ] = sq_error_level_difference( filename )
     orig = imread(filename);
     
     % filename string operations...
-    mod_filename = get_modified_filen(filename, '_mod.' );
+    %mod_filename = get_modified_filen(filename, '_mod.' );
     
+    %{
     % Save new image as original image with 50% quality
     imwrite( orig, mod_filename, 'Quality', 50);
     % for i = 0..count
@@ -21,12 +22,15 @@ function [ diff ] = sq_error_level_difference( filename )
         % open newly modified image as modified image
     
     mod_img = imread( mod_filename );
+    %}
+    
+    mod_img = compress_image( orig );
     
     diff = ( orig - mod_img ).^2;
-    mod_filename = get_modified_filen( filename, '_diff.' ); 
+    %mod_filename = get_modified_filen( filename, '_diff.' ); 
     % solve ( original - most modified ).^2
     
-    imwrite( diff, mod_filename );
+    %imwrite( diff, mod_filename );
     
     % save to disk
     % or return value
